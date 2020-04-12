@@ -1,0 +1,65 @@
+.home {
+  padding-top: 2.5%;
+  padding-bottom: 10%;
+  min-height: 100vh;
+}
+
+aside {
+  height: 1000000px;
+}
+
+section.tasks {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+input.add-task {
+  border: none;
+  background: transparent;
+  width: 30rem;
+  height: 3rem;
+  position: relative;
+}
+::placeholder {
+  font-size: 1rem;
+  padding: 0 0 0 1.5rem;
+}
+
+input.add-task:hover {
+  border: 1px solid #a5a5a596;
+  outline: none;
+}
+
+ul li {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding: 1rem;
+  text-align: left;
+}
+.checkTask {
+  background: transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #b9b9b9;
+  display: inline-block;
+}
+
+.text-of-task{
+  word-break: break-all;
+}
+
+.edit-task,
+.delete-task,
+.checkTask {
+  cursor: pointer;
+}
+
+
+// .form-save-task{
+//   // display: none;
+// }
+
+// input.edit-task{
+// background: transparent;
+// }

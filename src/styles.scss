@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-text-color {
+  color: #ecf0f1;
+}
+.main-bg-color {
+  background-color: #ecf0f1;
+}
+
+.secondary-text-color {
+  color: #fc5185;
+}
+.secondary-bg-color {
+  background-color: #fc5185;
+}
+
+.blue-text-color {
+  color: #364f6b;
+}
+.blue-bg-color {
+  background-color: #364f6b;
+}
+.border-bottom {
+  display: inline-block;
+  width: 150px;
+  height: 4px;
+  background-color: #bfc2c2;
+  border-radius: 5px;
+  position: relative;
+
+  i {
+    background-color: #fc5185;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+}

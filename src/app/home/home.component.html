@@ -1,0 +1,38 @@
+<section class="home main-bg-color">
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 blue-bg-color">
+
+            </aside>
+            <section class="col-md-9 tasks">
+                <h6 class="text-left">Today : </h6>
+                <ul class="list-unstyled">
+                    <li *ngFor="let task of userTasks" class="blue-text-color" [id]='task.id'>
+                        <i class="checkTask mr-3" (click)="taskDone($event)"></i>
+                        <i *ngIf="task.userEmail == currentUserEmail" class="text-of-task">
+                            {{task.userTask}}
+                        </i>
+                        <i class="fas fa-pen edit-task float-right" (click)="editTask($event)"></i>
+                        <i class="fas fa-trash-alt delete-task float-right mr-3" (click)="deleteTask($event)"></i>
+                        
+                        <!-- Start form to  edit task -->
+                        <!-- <form [formGroup]="formEditTask" (ngSubmit)="onSubmitEdit(formEditTask)">
+                            <p>
+                                <a class=""(click)='saveTaskAfterEdit($event)'>save</a>
+                                <input formControlName="editTask"  class="edit-task" [value]='task.userTask'>
+                            </p>
+                        </form> -->
+                    </li>
+                </ul>
+                <div class="col-sm-12 col-md-6 text-center formToAddTask">
+                    <form [formGroup]="formToAddTasks" (ngSubmit)="onSubmit(formToAddTasks)">
+                        <p>
+                            <a class="fas fa-plus"></a>
+                            <input formControlName="userTask" placeholder="Add Task" class="add-task" (click)="inputClick($event)">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
