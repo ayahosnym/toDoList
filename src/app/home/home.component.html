@@ -1,34 +1,38 @@
-<section class="home main-bg-color">
+<section class="home">
     <div class="container-fluid">
-        <div class="row">
-            <aside class="col-md-3 blue-bg-color">
-
-            </aside>
-            <section class="col-md-9 tasks">
-                <h6 class="text-left">Today : </h6>
+        <div class="row no-gutters justify-content-center">
+            <section class="col-sm-12 col-md-9 tasks ">
                 <ul class="list-unstyled">
-                    <li *ngFor="let task of userTasks" class="blue-text-color" [id]='task.id'>
+                    <h6 class="text-left mb-3"> Today: </h6>
+                    <li *ngFor="let task of userTasks" class="blue-text-color mb-5" [id]='task.id'>
                         <i class="checkTask mr-3" (click)="taskDone($event)"></i>
                         <i *ngIf="task.userEmail == currentUserEmail" class="text-of-task">
                             {{task.userTask}}
                         </i>
-                        <i class="fas fa-pen edit-task float-right" (click)="editTask($event)"></i>
+
+                        <i class="fas fa-pen edit-task float-right " (click)="editTask(inputEdit)"></i>
                         <i class="fas fa-trash-alt delete-task float-right mr-3" (click)="deleteTask($event)"></i>
-                        
+
                         <!-- Start form to  edit task -->
-                        <!-- <form [formGroup]="formEditTask" (ngSubmit)="onSubmitEdit(formEditTask)">
-                            <p>
-                                <a class=""(click)='saveTaskAfterEdit($event)'>save</a>
-                                <input formControlName="editTask"  class="edit-task" [value]='task.userTask'>
-                            </p>
-                        </form> -->
+                        <form [formGroup]="formEditTask"(ngSubmit)="onSubmitEdit(formEditTask,task)" 
+                            class="form-edit-task">
+                            <input formControlName="editTask" [value]='task.userTask' #inputEdit class="edit-task mb-2">
+                          
+                            <button class="mr-5 px-3 text-white secondary-bg-color save-task-after-edit" type="submit">Save</button>
+                            <a class="mr-5" (click)='cancelTaskAfterEdit($event)'>cancel</a>
+                        </form>
                     </li>
                 </ul>
+                <!-- no-tasks -->
+                <p *ngIf="userTasks.length == 0" class="no-tasks blue-text-color mb-5">
+                    Your to-do list let you less stressful, more organized and feel accomplished 
+                </p>
                 <div class="col-sm-12 col-md-6 text-center formToAddTask">
                     <form [formGroup]="formToAddTasks" (ngSubmit)="onSubmit(formToAddTasks)">
                         <p>
-                            <a class="fas fa-plus"></a>
-                            <input formControlName="userTask" placeholder="Add Task" class="add-task" (click)="inputClick($event)">
+                            <!-- <a class="fas fa-plus"></a> -->
+                            <input formControlName="userTask" placeholder=" + Add Task " class="add-task"
+                                (click)="inputClick($event)">
                         </p>
                     </form>
                 </div>

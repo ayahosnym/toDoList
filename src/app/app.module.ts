@@ -24,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SignUpComponent,
     LandingPageComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+  
   ],
   imports: [
     BrowserModule,

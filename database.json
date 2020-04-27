@@ -1,7 +1,46 @@
 {
   "users": [
-   
+    {
+      "userName": "aya",
+      "email": "aya@gmail.com",
+      "password": "123Aya",
+      "id": 1
+    },
+    {
+      "userName": "yoo",
+      "email": "yoo@gmail.com",
+      "password": "123Yoo",
+      "id": 2
+    }
   ],
-  "tasks": [],
-  "activeUser": []
+  "tasks": [
+    {
+      "userTask": "hjhhhhhhhhhhhhhh",
+      "userName": "yoo",
+      "userEmail": "yoo@gmail.com",
+      "id": 3
+    },
+    {
+      "userTask": "hhhhhhhhhhhh",
+      "userName": "yoo",
+      "userEmail": "yoo@gmail.com",
+      "id": 4
+    }
+  ],
+  "activeUser": [
+    {
+      "userName": "yoo",
+      "email": "yoo@gmail.com",
+      "password": "123Yoo",
+      "idUserActive": 2,
+      "id": 1
+    },
+    {
+      "email": "yoo@gmail.com",
+      "password": "123Yoo",
+      "idUserActive": 2,
+      "nameUserActive": "yoo",
+      "id": 2
+    }
+  ]
 }

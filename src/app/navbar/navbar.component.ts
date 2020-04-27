@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit {
   userActive = [];
   idUserActive
+
   constructor(private service: TodoService, private router: Router) {
 
     this.service.getUserActive().subscribe((data: any) => {
@@ -27,6 +29,9 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/']);
   }
   ngOnInit() {
+    let n = document.getElementById('n')
+    console.log(n.clientHeight);
+    
   }
 
 }

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server":"json-server --watch database.json"
+    "server": "json-server --watch database.json"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "angular-editable-text": "^2.0.12",
     "bootstrap": "^4.4.1",
     "ngx-bootstrap": "^5.5.0",
     "rxjs": "~6.4.0",
@@ -48,3 +49,5 @@
     "typescript": "~3.5.3"
   }
 }
+
+

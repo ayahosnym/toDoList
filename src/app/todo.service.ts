@@ -32,11 +32,16 @@ export class TodoService {
   postUsertask(task) {
     return this.http.post("http://localhost:3000/tasks", task);
   }
+
   getUsertask() {
-    return this.http.get("http://localhost:3000/tasks");
+    return this.http.get("http://localhost:3000/tasks/");
+  }
+  postTaskAfterEdit(task) {
+    return this.http.post("http://localhost:3000/tasks", task);
   }
 
   deleteUserTask(id) {
     return this.http.delete('http://localhost:3000/tasks/' + id);
   }
+
 }
